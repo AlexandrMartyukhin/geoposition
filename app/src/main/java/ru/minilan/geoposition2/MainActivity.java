@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         super.onStart();
         if (provider != null) {
             textViewProvider.setText(provider);
-
-            
+            \\\\
             locationManager.requestLocationUpdates(provider, 5000, 5, listener);
         }
     }
