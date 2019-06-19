@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
     private TextView textViewAccuracy;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
         super.onStart();
         if (provider != null) {
             textViewProvider.setText(provider);
-            //
+            \\\\
             locationManager.requestLocationUpdates(provider, 5000, 5, listener);
         }
     }
@@ -94,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
 
     }
 
-    private LocationListener listener =  new LocationListener() {
+    private LocationListener listener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
             String latitude = Double.toString(location.getLatitude());
@@ -106,12 +105,15 @@ public class MainActivity extends AppCompatActivity implements ActivityCompat.On
             textViewLongitude.setText(longitude);
             textViewAccuracy.setText(accuracy);
         }
+
         @Override
         public void onStatusChanged(String provider, int status, Bundle extras) {
         }
+
         @Override
         public void onProviderEnabled(String provider) {
         }
+
         @Override
         public void onProviderDisabled(String provider) {
         }
